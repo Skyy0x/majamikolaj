@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COUNTDOWN TO LEGAL</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #2b2331, #3a2d45);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .flower {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+    }
+
+    .petal {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background: pink;
+      border-radius: 50%;
+      top: 0;
+      left: 25%;
+      transform-origin: 50% 100%;
+    }
+
+    .flower .petal:nth-child(1) { transform: rotate(0deg) translateY(-50%); }
+    .flower .petal:nth-child(2) { transform: rotate(72deg) translateY(-50%); }
+    .flower .petal:nth-child(3) { transform: rotate(144deg) translateY(-50%); }
+    .flower .petal:nth-child(4) { transform: rotate(216deg) translateY(-50%); }
+    .flower .petal:nth-child(5) { transform: rotate(288deg) translateY(-50%); }
+
+    .center {
+      position: absolute;
+      width: 25%;
+      height: 25%;
+      background: yellow;
+      border-radius: 50%;
+      top: 37%;
+      left: 37%;
+    }
+
+    /* Position flowers around the frame */
+    .flower:nth-child(1) { top: 10px; left: 20px; transform: scale(1.2); }
+    .flower:nth-child(2) { top: 50px; right: 30px; transform: scale(0.8); }
+    .flower:nth-child(3) { bottom: 30px; left: 40px; transform: scale(0.9); }
+    .flower:nth-child(4) { bottom: 50px; right: 50px; transform: scale(1.1); }
+    .flower:nth-child(5) { top: 180px; left: -20px; transform: scale(0.7); }
+    .flower:nth-child(6) { top: 200px; right: -20px; transform: scale(0.7); }
+    .flower:nth-child(7) { bottom: -10px; left: 200px; transform: scale(1.2); }
+    .flower:nth-child(8) { top: -10px; left: 250px; transform: scale(1.0); }
+
+    /* Photo placeholder */
+    .photo {
+      width: 300px;
+      height: 400px;
+      background-color: #444;
+      margin: 0 auto 20px auto;
+      border-radius: 12px;
+      background-size: cover;
+      background-position: center;
+      border: 3px solid white;
+    }
+
+    /* Safe caption example */
+    .text {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 20px;
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .unit {
+      text-align: center;
+    }
+    .label {
+      font-size: 16px;
+      margin-top: 5px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Flower row -->
+    <div class="flower">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="center"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: lightblue;"></div><div class="petal" style="background: lightblue;"></div><div class="petal" style="background: lightblue;"></div><div class="petal" style="background: lightblue;"></div><div class="petal" style="background: lightblue;"></div>
+        <div class="center" style="background: orange;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: orange;"></div><div class="petal" style="background: orange;"></div><div class="petal" style="background: orange;"></div><div class="petal" style="background: orange;"></div><div class="petal" style="background: orange;"></div>
+        <div class="center" style="background: red;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: yellow;"></div><div class="petal" style="background: yellow;"></div><div class="petal" style="background: yellow;"></div><div class="petal" style="background: yellow;"></div><div class="petal" style="background: yellow;"></div>
+        <div class="center" style="background: pink;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: purple;"></div><div class="petal" style="background: purple;"></div><div class="petal" style="background: purple;"></div><div class="petal" style="background: purple;"></div><div class="petal" style="background: purple;"></div>
+        <div class="center" style="background: yellow;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: lightgreen;"></div><div class="petal" style="background: lightgreen;"></div><div class="petal" style="background: lightgreen;"></div><div class="petal" style="background: lightgreen;"></div><div class="petal" style="background: lightgreen;"></div>
+        <div class="center" style="background: blue;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: red;"></div><div class="petal" style="background: red;"></div><div class="petal" style="background: red;"></div><div class="petal" style="background: red;"></div><div class="petal" style="background: red;"></div>
+        <div class="center" style="background: yellow;"></div>
+      </div>
+      <div class="flower">
+        <div class="petal" style="background: cyan;"></div><div class="petal" style="background: cyan;"></div><div class="petal" style="background: cyan;"></div><div class="petal" style="background: cyan;"></div><div class="petal" style="background: cyan;"></div>
+        <div class="center" style="background: pink;"></div>
+      </div>
+    </div>
+
+    <div class="photo" style="background-image: url('photo.jpg');"></div>
+
+    <div class="countdown">
+        <div class="unit">
+          <div id="days">00</div>
+          <div class="label">DAYS</div>
+        </div>
+        <div class="unit">
+          <div id="hours">00</div>
+          <div class="label">HOURS</div>
+        </div>
+        <div class="unit">
+          <div id="minutes">00</div>
+          <div class="label">MINUTES</div>
+        </div>
+        <div class="unit">
+          <div id="seconds">00</div>
+          <div class="label">SECONDS</div>
+        </div>
+      </div>
+
+    <div class="text">COUNTDOWN TO LEGAL</div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const targetDate = new Date(`${year}-12-01T00:00:00`);
+
+      // If today is already December 1, count to next year's December 1
+      if (now > targetDate) {
+        targetDate.setFullYear(year + 1);
+      }
+
+      const diff = targetDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // initial call
+  </script>
+</body>
+</html>
